@@ -30,3 +30,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     typeWriter(); // Start the typing animation
 });
+
+
+
+// fetching data for advertisement 
+
+fetch("../json/advertisement.json").then((data) => {
+    return data.json();
+}).then((objectData) => {
+    console.log(objectData[0].image)
+    let tableData = "";
+    objectData.map((value) => {
+        tableData += `
+        <div class="each-ad-div">
+        <img src=${value.image} alt="">
+
+        <div id="info">
+          <p>${value.description}</p>
+        </div>
+      </div>
+        `
+    })
+
+    document.querySelector("#advertisement-container").innerHTML = tableData;
+})

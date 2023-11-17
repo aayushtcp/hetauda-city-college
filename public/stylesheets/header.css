@@ -9,6 +9,7 @@
     --font-size-h1: 1.5rem;
     --gap-for-phone: 2rem;
     --icon-size: 1.5rem;
+    --icon-color: #fff;
 }
 
 * {
@@ -18,17 +19,18 @@
 #navbar {
     display: flex;
     justify-content: space-between;
-    background: var(--color-one);
     position: relative;
     width: 100%;
     padding: 1vw 10vw;
     align-items: center;
     position: absolute;
+    z-index: 9;
+    background: #fff;
     display: none;
 }
 
 #navbar a {
-    color: white;
+    color: #111;
     font-size: var(--font-size-a);
     cursor: pointer;
 }
@@ -54,6 +56,10 @@
     justify-content: center;
     font-size: var(--icon-size);
     text-transform: uppercase;
+}
+#right-nav a i
+{
+    color: #111;
 }
 
 
@@ -170,7 +176,7 @@ h2#our-programe-headline {
     position: absolute;
     right: 10vw;
     top: 3vw;
-    color: white;
+    color: var(--icon-color);
     cursor: pointer;
     font-size: var(--icon-size);
 }
