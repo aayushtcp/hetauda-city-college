@@ -1,0 +1,252 @@
+:root {
+    --color-one: #00A9FF;
+    --color-two: #89CFF3;
+    --color-three: #A0E9FF;
+    --color-four: #CDF5FD;
+    --font-size-a: 1rem;
+    --font-size-p: 0.875rem;
+    --font-size-h2: 1.25rem;
+    --font-size-h1: 1.5rem;
+    --gap-for-phone: 2rem;
+    --icon-size: 1.5rem;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    background: var(--color-one);
+    position: relative;
+    width: 100%;
+    padding: 1vw 10vw;
+    align-items: center;
+    position: absolute;
+    display: none;
+}
+
+#navbar a {
+    color: white;
+    font-size: var(--font-size-a);
+    cursor: pointer;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+#logo img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+#right-nav {
+    display: flex;
+    gap: var(--gap-for-phone);
+    align-items: center;
+    justify-content: center;
+    font-size: var(--icon-size);
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+/*  all navigation header menu is here*/
+
+#all-programs {
+    height: 100vh;
+    position: fixed;
+    background: var(--color-one);
+    gap: 10vw;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5vw;
+    z-index: -1;
+    transform: translateY(-100%);
+    transition: .5s ease-in-out;
+    top: 0;
+}
+
+#all-programs.open {
+    z-index: 999;
+    transform: translateY(0%);
+}
+
+
+
+
+#about-us {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    gap: 3vw;
+}
+
+#about-us #first-div {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#all-programs a {
+    color: white;
+    font-size: var(--font-size-a);
+    letter-spacing: 1px;
+}
+
+#all-programs a:hover {
+    color: red;
+}
+
+#all-programs h2 {
+    padding: 1vw 0;
+    font-size: var(--font-size-h2);
+    text-transform: uppercase;
+    color: white;
+    border-top: 1px solid white;
+}
+
+#all-programs #it-degree h2,
+#all-programs #connect h2 {
+    border: initial;
+}
+
+
+#our-programms {
+    display: flex;
+    gap: 5vw;
+    padding-top: 8vw;
+    position: relative;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+h2#our-programe-headline {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    transform: translate(-35%, -0%);
+    width: 100%;
+}
+
+#our-programms #it-degree,
+#our-programms #connect,
+#our-programms #business-degree,
+#our-programms #student-life {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    gap: 10px;
+    min-height: 20vw;
+}
+
+
+#our-programms #first-div,
+#our-programms #second-div {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+/* cancel button */
+#cancel-navmenu-button {
+    position: absolute;
+    right: 10vw;
+    top: 3vw;
+    color: white;
+    cursor: pointer;
+    font-size: var(--icon-size);
+}
+
+#cancel-navmenu-button:hover {
+    scale: 1.1;
+}
+
+@media (max-width: 980px) {
+
+
+
+    #navbar {
+        padding: 3vh 1vh;
+    }
+
+    #right-nav a:nth-child(1) {
+        display: none;
+    }
+
+
+    #logo img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+
+
+
+    #all-programs {
+        overflow: hidden;
+        overflow-y: scroll;
+        gap: 10vh;
+        justify-content: flex-start;
+        padding-top: initial;
+        flex-direction: column;
+        padding: 10px;
+        height: 100vh;
+    }
+
+
+
+    #about-us {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width: fit-content;
+        gap: var(--gap-for-phone);
+    }
+
+
+    #our-programms {
+        gap: initial;
+        position: relative;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100vw;
+        flex-direction: column;
+        gap: var(--gap-for-phone);
+    }
+
+    #our-programms #first-div,
+    #our-programms #second-div {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        gap: var(--gap-for-phone);
+        justify-content: space-around;
+    }
+
+    #all-programs a {
+        color: white;
+        font-size: var(--font-size-a);
+        letter-spacing: 1px;
+    }
+
+
+
+}
