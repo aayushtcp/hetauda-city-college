@@ -23,10 +23,11 @@
     width: 100%;
     padding: 1vw 10vw;
     align-items: center;
-    position: absolute;
+    /* position: absolute; */
     z-index: 9;
-    background: #fff;
-    display: none;
+    background: #dadada;
+    border-bottom: 1px solid black;
+    /* display: none; */
 }
 
 #navbar a {
@@ -114,6 +115,7 @@
     color: white;
     font-size: var(--font-size-a);
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 #all-programs a:hover {

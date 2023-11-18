@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/contact.css">
+</head>
+
+<body>
+
+    <% include header.ejs %>
+
+
+
+        <div id="contact">
+            <div id="call-us">
+                <h1>Contact Us</h1>
+                <h3>Hetauda city Colleg</h3>
+                <h3>Phone Number : 09090909090</h3>
+                <h3>info@gmail.com</h3>
+            </div>
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.632502373647!2d85.04622824837043!3d27.417107969823345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb4991cc5cd01d%3A0x871e7e627e6b38b!2sHetauda%20City%20College!5e0!3m2!1sen!2snp!4v1700283649139!5m2!1sen!2snp"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <form action="">
+                <h1>Get In Touch</h1>
+                <div id="input-field">
+                    <label for="fullname">
+                        <input type="text" name="fullname" id="" placeholder="Your Full Name" required>
+                    </label>
+                    <label for="email">
+                        <input type="email" name="email" id="" placeholder="Your Email" required>
+                    </label>
+                    <label for="subject">
+                        <input type="text" name="subject" id="" placeholder="Your Subject" required>
+                    </label>
+                    <label for="message">
+                        <textarea name="messange" id="" cols="30" rows="10" placeholder="Type Your Message"></textarea>
+                    </label>
+                    <input type="submit" id="send-button" value="Submit">
+                </div>
+            </form>
+        </div>
+
+
+
+
+        <!-- footer -->
+        <% include footer.ejs %>
+
+</body>
+
+</html>

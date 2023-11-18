@@ -1,0 +1,79 @@
+#content-body {
+    width: 70%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    padding: 3vw 0;
+}
+
+h1 {
+    color: #222;
+    text-transform: uppercase;
+}
+
+#img-wrap {
+    width: 100%;
+    height: 50vh;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#description {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+#description p {
+    letter-spacing: 1px;
+    font-size: 23px;
+    text-align: center;
+    color: #333;
+}
+
+
+#people {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+
+}
+
+#each-people img {
+    height: 70%;
+    width: 70%;
+    border: 1px solid gray;
+}
+
+#each-people {
+    min-height: 300px;
+    width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+}
+
+#each-people p {
+    height: auto;
+    color: #111;
+}
+
+#each-people h2 {
+    color: #111;
+}

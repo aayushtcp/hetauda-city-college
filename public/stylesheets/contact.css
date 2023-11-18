@@ -1,0 +1,102 @@
+:root {
+    --color-one: #00A9FF;
+    --color-two: #89CFF3;
+    --color-three: #A0E9FF;
+    --color-four: #CDF5FD;
+    --font-size-a: 1rem;
+    --font-size-p: 0.875rem;
+    --font-size-h2: 1.25rem;
+    --font-size-h1: 1.5rem;
+    --gap-for-phone: 2rem;
+    --icon-size: 1.5rem;
+    --icon-color: #fff;
+}
+
+
+
+
+#contact {
+    min-height: 100vh;
+    width: 70vw;
+    margin: 0 auto;
+    gap: 3vw;
+    display: flex;
+    flex-direction: column;
+    padding: 3vw 0;
+}
+
+#contact h1 {
+    color: #222;
+}
+
+#contact h3 {
+    color: #444;
+}
+
+
+#call-us {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#call-us h1 {
+    font-size: 40px;
+}
+
+#map {
+    height: 50vh;
+    width: 100%;
+}
+
+#map iframe {
+    width: 100%;
+    height: 100%;
+    background: gray;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+form #input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+form #input-field label {
+    display: flex;
+    flex-direction: column;
+}
+
+form #input-field label input,
+form #input-field label :placeholder-shown,textarea {
+    padding: 15px;
+    outline: none;
+    color: black;
+}
+
+form input#send-button {
+    padding: 10px;
+    color: white;
+    background: var(--color-two);
+    font-size: larger;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+@media (max-width: 980px) {
+    #contact {
+        width: 100%;
+        padding: 2vw;
+    }
+}
