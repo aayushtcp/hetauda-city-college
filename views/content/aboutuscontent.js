@@ -7,8 +7,8 @@ const contentData = {
         altText: 'About Heatuda City college',
         content: 'some Good Paragraph will Appear here',
     },
-    collegepartner: {
-        title: 'College Partner',
+    whyhcc: {
+        title: 'Why HCC',
         imageUrl: 'path/to/college-image.jpg',
         altText: 'College Partner for the College',
         content: 'Information about the college Partner.',

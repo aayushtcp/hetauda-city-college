@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/bachelor.css">
+</head>
+
+<body>
+    <% include header.ejs %>
+
+        <div id="bachelor">
+            <h1>
+                <!-- Title of Document -->
+
+                <%= title %>
+            </h1>
+            <div id="img-wrap">
+                <img src=<%=imageUrl %> alt="">
+            </div>
+
+            <div id="description">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas consequuntur illo nostrum dignissimos
+                    voluptas, vel, quae reprehenderit possimus id fugit commodi quaerat veniam, facere sapiente itaque
+                    maiores mollitia. Dicta, iusto.
+                </p>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum possimus soluta commodi fugit
+                    voluptatum ipsum nam ipsa laborum aspernatur sunt consequatur voluptas, accusantium porro molestias
+                    fugiat aliquid rerum id tenetur!
+                </p>
+            </div>
+
+            <div id="semister">
+
+
+                <ul>
+                    <h3>
+                        <%= firstYear %>
+                    </h3>
+                    <li><%= firstYearSubOne %></li>
+                    <li><%= firstYearSubTwo %></li>
+                    <li><%= firstYearSubThree %></li>
+                    <li><%= firstYearSubFour %></li>
+                    <li><%= firstYearSubFive %></li>
+                </ul>
+                <ul>
+                    <h3>
+                        <%= secondYear %>
+                    </h3>
+                    <li><%= secondYearSubOne %></li>
+                    <li><%= secondYearSubTwo %></li>
+                    <li><%= secondYearSubThree %></li>
+                    <li><%= secondYearSubFour %></li>
+                    <li><%= secondYearSubFive %></li>
+                </ul>
+                <ul>
+                    <h3>
+                        <%= thirdYear %>
+                    </h3>
+                    <li><%= thirdYearSubOne %></li>
+                    <li><%= thirdYearSubTwo %></li>
+                    <li><%= thirdYearSubThree %></li>
+                    <li><%= thirdYearSubFour %></li>
+                    <li><%= thirdYearSubFive %></li>
+                </ul>
+                <ul>
+                    <h3>
+                        <%= fourthYear %>
+                    </h3>
+                    <li><%= fourthYearSubOne %></li>
+                    <li><%= fourthYearSubTwo %></li>
+                    <li><%= fourthYearSubThree %></li>
+                    <li><%= fourthYearSubFour %></li>
+                    <li><%= fourthYearSubFive %></li>
+                </ul>
+                <ul>
+                    <h3>
+                        <%= fifthYear %>
+                    </h3>
+                    <li><%= fifthYearSubOne %></li>
+                    <li><%= fifthYearSubTwo %></li>
+                    <li><%= fifthYearSubThree %></li>
+                    <li><%= fifthYearSubFour %></li>
+                    <li><%= fifthYearSubFive %></li>
+                </ul>
+                <ul>
+                    <h3>
+                        <%= sixthYear %>
+                    </h3>
+                    <li><%= sixthYearSubOne %></li>
+                    <li><%= sixthYearSubTwo %></li>
+                    <li><%= sixthYearSubThree %></li>
+                    <li><%= sixthYearSubFour %></li>
+                    <li><%= sixthYearSubFive %></li>
+                </ul>
+                <ul>
+                    <h3>
+                        <%= seventhYear %>
+                    </h3>
+                    <li><%= seventhYearSubOne %></li>
+                    <li><%= seventhYearSubTwo %></li>
+                    <li><%= seventhYearSubThree %></li>
+                    <li><%= seventhYearSubFour %></li>
+                    <li><%= seventhYearSubFive %></li>
+                </ul>
+                <ul>
+                    <h3>
+                        <%= eightYear %>
+                    </h3>
+                    <li><%= eightYearSubOne %></li>
+                    <li><%= eightYearSubTwo %></li>
+                    <li><%= eightYearSubThree %></li>
+                    <li><%= eightYearSubFour %></li>
+                    <li><%= eightYearSubFive %></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <% include footer.ejs %>
+
+</body>
+
+</html>

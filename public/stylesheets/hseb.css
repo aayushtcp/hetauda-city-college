@@ -1,0 +1,79 @@
+#hseb {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    padding: 2vw 0;
+    width: 70%;
+    min-height: 100vh;
+    text-align: left;
+
+}
+
+#hseb img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#hseb h1 {
+    font-size: 40px;
+    color: #111;
+}
+
+#img-wrap {
+    width: 100%;
+    height: 50vh;
+}
+
+#description 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+}
+#description  p 
+
+{
+    color: #111;
+}
+
+
+#course-structure {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#hseb h2 {
+    color: black;
+}
+
+#hseb table {
+    border-collapse: collapse;
+    width: 100%;
+    color: black;
+}
+th 
+{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+th,
+tr,
+td {
+    padding: 20px;
+    color: black;
+    /* border: 1px solid black; */
+}
+
+
+@media (max-width: 980px) {
+    #hseb
+    {
+        width: 100%;
+        padding: 2vw;
+    }
+}
