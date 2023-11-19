@@ -9,6 +9,7 @@
     </title>
     <link rel="stylesheet" href="/stylesheets/template.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/facultyandstaff.css">
 </head>
 
 <body>
@@ -19,37 +20,94 @@
                 <%= title %>
             </h1>
             <div id="img-wrap">
-                <img src="/images/index-image.avif" alt="">
+
+                <% if (typeof imageUrl !=='undefined' ) { %>
+
+                    <img src=<%=imageUrl %>
+                    alt="">
+
+                    <% } %>
             </div>
 
             <div id="description">
-                <p>
-                    <%= content %>
-                </p>
+
+
+                <% if (typeof paragraphOne !=='undefined' ) { %>
+                    <p>
+                        <%= paragraphOne %>
+                    </p>
+                    <% } %>
+
+                        <% if (typeof paragraphTwo !=='undefined' ) { %>
+                            <p>
+                                <%= paragraphTwo %>
+                            </p>
+                            <% } %>
+
+
+                                <% if (typeof paragraphThree !=='undefined' ) { %>
+                                    <p>
+                                        <%= paragraphThree %>
+                                    </p>
+                                    <% } %>
+
+
+                                        <% if (typeof paragraphFour !=='undefined' ) { %>
+                                            <p>
+                                                <%= paragraphFour %>
+                                            </p>
+                                            <% } %>
+
+                                                <% if (typeof paragraphFive !=='undefined' ) { %>
+                                                    <p>
+                                                        <%= paragraphFive %>
+                                                    </p>
+                                                    <% } %>
             </div>
 
 
-            <!-- <div id="people">
-                <div id="each-people">
-                    <img src="/images/naresh.jpeg" alt="">
-                    <h2>People Name</h2>
 
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem facilis placeat tempore
-                        ratione omnis reprehenderit est quam nam debitis praesentium quis, aspernatur dignissimos dolor
-                        voluptatibus doloribus excepturi! Magni, rem inventore.</p>
-                </div>
-            </div> -->
+            <!-- in this he wychscc.ejs page will render here and  -->
+            <% if (typeof whyhcc !=='undefined' ) { %>
+                <% include whyhcc.ejs %>
+                    <%= whyhcc %>
+                        <% } %>
+
+
+                            <!-- addding description on whyhscc page -->
+
+
+                            <% if (typeof quote !=='undefined' ) { %>
+                                <p>
+                                    <%= quote %>
+                                </p>
+                                <% } %>
+
+                                    <% if (typeof whyhccparagraphone !=='undefined' ) { %>
+                                        <p>
+                                            <%= whyhccparagraphone %>
+                                        </p>
+                                        <% } %>
+
+                                            <% if (typeof whyhccparagraphtwo !=='undefined' ) { %>
+                                                <p>
+                                                    <%= whyhccparagraphtwo %>
+                                                </p>
+                                                <% } %>
+
+
+
+
+
+                                                    <!-- including faculty and staff page here -->
+                                                    <% include facultyandstaff.ejs %>
+
+
+                                                        <!-- footer  -->
+                                                        <% include footer.ejs %>
         </div>
 
-
-
-        <% include footer.ejs %>
-
-
-
-
-            <script src="/javascripts/template.js"></script>
+        <script src="/javascripts/template.js"></script>
 </body>
 
 </html>

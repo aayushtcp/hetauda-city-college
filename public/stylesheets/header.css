@@ -23,17 +23,20 @@
     width: 100%;
     padding: 1vw 10vw;
     align-items: center;
-    /* position: absolute; */
     z-index: 9;
-    background: #dadada;
-    border-bottom: 1px solid black;
-    /* display: none; */
+    background: hsl(0, 0%, 89%);
+    /* position: sticky; */
+    top: 0;
 }
 
 #navbar a {
     color: #111;
     font-size: var(--font-size-a);
     cursor: pointer;
+}
+#navbar a span
+{
+    color: #111;
 }
 
 #logo {
@@ -75,7 +78,8 @@
 #all-programs {
     height: 100vh;
     position: fixed;
-    background: var(--color-one);
+
+    background: hsl(0, 0%, 70%);
     gap: 10vw;
     display: flex;
     width: 100vw;

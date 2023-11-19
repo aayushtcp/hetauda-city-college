@@ -17,161 +17,203 @@
     <% include header.ejs %>
 
 
+        <div id="hseb-container">
 
 
-
-
-        <div id="hseb">
-
-            <h1>
-                <%= title %>
-            </h1>
-
-            <div id="img-wrap">
-                <img src=<%= imageUrl %> alt="">
+            <div id="list">
+                <a href="/hsebscience">+2 in Science</a>
+                <a href="/hsebmanagement">+2 in Management</a>
+                <a href="/hseblaw">+2 in Law</a>
+                <a href="/hsebhotelmanagement">+2 in Hotel Management</a>
             </div>
 
-            <div id="description">
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis adipisci quo aperiam minima
-                    quam aspernatur quia harum officia ipsum, saepe accusantium repudiandae impedit magni debitis. Quod
-                    porro consequatur et molestiae?
-                </p>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam beatae labore perferendis ratione
-                    voluptatibus dolorum, quae nisi consequuntur quas rerum a non earum fuga quo sapiente sit. Corporis,
-                    sint modi.
-                </p>
-            </div>
+            <div id="hseb">
 
-            <div id="course-structure">
+                <h1>
+                    <%= title %>
+                </h1>
+
+                <div id="img-wrap">
+                    <img src=<%=imageUrl %> alt="">
+                </div>
+
+                <div id="description">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis adipisci quo aperiam minima
+                        quam aspernatur quia harum officia ipsum, saepe accusantium repudiandae impedit magni debitis.
+                        Quod
+                        porro consequatur et molestiae?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam beatae labore perferendis
+                        ratione
+                        voluptatibus dolorum, quae nisi consequuntur quas rerum a non earum fuga quo sapiente sit.
+                        Corporis,
+                        sint modi.
+                    </p>
+                </div>
+
                 <h2>Course Structure</h2>
-                <table>
-                    <tr>
-                        <th>
-                            Grade <%= grade11 %>
-                        </th>
-                        <th>
-                            Grade <%= grade12 %>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            <%= compulsary %>
-                        </th>
-                        <th>
-                            <%= compulsary %>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <%= subone11 %>
-                        </td>
-                        <td>
-                            <%= subone12 %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <%= subtwo11 %>
+                <div id="course-structure">
 
-                        </td>
-                        <td>
-                            <%= subtwo12 %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <%= subthree11 %>
+                    <ul>
+                        <h2>Grade 11
 
-                        </td>
-                        <td>
-                            <%= subthree12 %>
+                            <% if (typeof compulsary !=='undefined' ) { %>
+                                <h3>
+                                    <%= compulsary %>
+                                </h3>
+                                <% } %>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <%= optional11 %>
 
-                        </th>
-                        <th>
-                            <%= optional12 %>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <%= subfour11 %>
+                        </h2>
 
-                        </td>
-                        <td>
-                            <%= subfour12 %>
+                        <% if (typeof subone11 !=='undefined' ) { %>
+                            <li>
+                                <%= subone11 %>
+                            </li>
+                            <% } %>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <%= subfive11 %>
-                        </td>
-                        <td>
-                            <%= subfive12 %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <%= subsix11 %>
-                        </td>
-                        <td>
-                            <%= subsix12 %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <%= subseven11 %>
-                        </td>
-                        <td>
-                            <%= subseven12 %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <%= subeight11 %>
-                        </td>
-                        <td>
-                            <%= subeight12 %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <%= subnine11 %>
-                        </td>
-                        <td>
-                            <%= subnine12 %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <%= subten11 %>
-                        </td>
-                        <td>
-                            <%= subten12 %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <%= subeleven11 %>
-                        </td>
-                        <td>
-                            <%= subeleven12 %>
-                        </td>
-                    </tr>
+                                <% if (typeof subtwo11 !=='undefined' ) { %>
+                                    <li>
+                                        <%= subtwo11 %>
+                                    </li>
+                                    <% } %>
 
-                </table>
+                                        <% if (typeof subthree11 !=='undefined' ) { %>
+                                            <li>
+                                                <%= subthree11 %>
+                                            </li>
+                                            <% } %>
+                                            <% if (typeof optional !=='undefined' ) { %>
+                                                <h3>
+                                                    <%= optional %>
+                                                </h3>
+                                                <% } %>
+
+                                                <% if (typeof subfour11 !=='undefined' ) { %>
+                                                    <li>
+                                                        <%= subfour11 %>
+                                                    </li>
+                                                    <% } %>
+                                                        <% if (typeof subfive11 !=='undefined' ) { %>
+                                                            <li>
+                                                                <%= subfive11 %>
+                                                            </li>
+                                                            <% } %>
+
+                                                            
+                                                            <% if (typeof subsseven11 !=='undefined' ) { %>
+                                                                <li>
+                                                                    <%= subsseven11 %>
+                                                                </li>
+                                                                <% } %>
+
+                                                                <% if (typeof subnine11 !=='undefined' ) { %>
+                                                                    <li>
+                                                                        <%= subnine11 %>
+                                                                    </li>
+                                                                    <% } %>
+
+                                                                    <% if (typeof subten11 !=='undefined' ) { %>
+                                                                        <li>
+                                                                            <%= subten11 %>
+                                                                        </li>
+                                                                        <% } %>
+
+                                                                        
+                                                                        <% if (typeof subeleven11 !=='undefined' ) { %>
+                                                                            <li>
+                                                                                <%= subeleven11 %>
+                                                                            </li>
+                                                                            <% } %>
+        
+
+
+                                                                
+                    </ul>
+
+
+                    <ul>
+                        <h2>Grade 11</h2>
+
+                        <% if (typeof compulsary !=='undefined' ) { %>
+                            <h3>
+                                <%= compulsary %>
+                            </h3>
+                            <% } %>
+
+                                <% if (typeof subone12 !=='undefined' ) { %>
+                                    <li>
+                                        <%= subone12 %>
+                                    </li>
+                                    <% } %>
+                                        <% if (typeof subtwo12 !=='undefined' ) { %>
+                                            <li>
+                                                <%= subtwo12 %>
+                                            </li>
+                                            <% } %>
+                                                <% if (typeof subthree12 !=='undefined' ) { %>
+                                                    <li>
+                                                        <%= subthree12 %>
+                                                    </li>
+                                                    <% } %>
+
+                                                        <% if (typeof optional !=='undefined' ) { %>
+                                                            <h3>
+                                                                <%= optional %>
+                                                            </h3>
+                                                            <% } %>
+
+                                                                <% if (typeof subfour12 !=='undefined' ) { %>
+                                                                    <li>
+                                                                        <%= subfour12 %>
+                                                                    </li>
+                                                                    <% } %>
+                                                                        <% if (typeof subfive12 !=='undefined' ) { %>
+                                                                            <li>
+                                                                                <%= subfive12 %>
+                                                                            </li>
+                                                                            <% } %>
+
+                                                                            <% if (typeof subsix12 !=='undefined' ) { %>
+                                                                                <li>
+                                                                                    <%= subsix12 %>
+                                                                                </li>
+                                                                                <% } %>
+
+                                                                            <% if (typeof subsseven12 !=='undefined' ) { %>
+                                                                                <li>
+                                                                                    <%= subsseven12 %>
+                                                                                </li>
+                                                                                <% } %>
+                
+                                                                                <% if (typeof subnine12 !=='undefined' ) { %>
+                                                                                    <li>
+                                                                                        <%= subnine12 %>
+                                                                                    </li>
+                                                                                    <% } %>
+                
+                                                                                    <% if (typeof subten12 !=='undefined' ) { %>
+                                                                                        <li>
+                                                                                            <%= subten12 %>
+                                                                                        </li>
+                                                                                        <% } %>
+                
+                                                                                        
+                                                                                        <% if (typeof subeleven12 !=='undefined' ) { %>
+                                                                                            <li>
+                                                                                                <%= subeleven12 %>
+                                                                                            </li>
+                                                                                            <% } %>
+
+                    </ul>
+                </div>
             </div>
+
+
+
         </div>
-
-
-
 
 
 
