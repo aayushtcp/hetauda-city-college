@@ -16,7 +16,7 @@
     background: white;
     padding: 5px;
     border-radius: 5px;
-    gap: 5px    ;
+    gap: 5px;
 }
 
 #staff-container #each-staff img {
@@ -27,6 +27,15 @@
     background: none;
 }
 
+
 #staff-container #each-staff h3 {
     color: #111;
+}
+
+@media (max-width: 980px) {
+
+    #staff-container #each-staff {
+        width: 100%;
+    }
+
 }

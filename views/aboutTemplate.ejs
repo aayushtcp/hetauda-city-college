@@ -100,11 +100,15 @@
 
 
                                                     <!-- including faculty and staff page here -->
-                                                    <% include facultyandstaff.ejs %>
+
+                                                    <% if (typeof isFacultyPeople !=='undefined' ) { %>
+                                                        <% include facultyandstaff.ejs %>
+                                                            <% } %>
 
 
-                                                        <!-- footer  -->
-                                                        <% include footer.ejs %>
+
+                                                                <!-- footer  -->
+                                                                <% include footer.ejs %>
         </div>
 
         <script src="/javascripts/template.js"></script>

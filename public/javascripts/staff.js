@@ -1,18 +1,29 @@
-fetch("../json/facultyandstaff.json").then((data) => {
-    return data.json();
-}).then((objectData) => {
-    // console.log(objectData[0].img)
-    let tableData = "";
-    objectData.map((value) => {
-        tableData +=
+
+
+fetch("../json/facultyandstaff.json").
+    then(response => {
+        return response.json();
+    }).then(objectdata => {
+        let table = "";
+        objectdata.map(function (item) {
+            table += `
+            <a href=${item.username} id="each-staff">
+            <img src="/images/naresh.jpeg" alt="">
+            <h3>Naresh Radi ko Xoro</h3>
+             </a>
             `
-        <div id="each-staff">
-        <img src=${value.img} alt="">
-        <h3>${value.name}</h3>
-    </div>
-        `
+        })
 
-    })
+        document.querySelector("#staff-container").innerHTML = table
 
-    document.querySelector("#staff-container").innerHTML = tableData;
-})
+        // document.querySelectorAll("#each-staff").forEach(function (item) {
+        //     // console.log(item)
+        //     item.addEventListener("click", function (e) {
+        //         console.log(e.target)
+        //     })
+        // })
+
+
+    });
+
+

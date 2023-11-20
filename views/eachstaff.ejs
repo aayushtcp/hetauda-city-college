@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/eachstaff.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <% include header.ejs %>
+
+        <div id="each-staff-container">
+
+
+            <% if (typeof name !=='undefined' ) { %>
+                <h1>
+                    <%= name %>
+                </h1>
+                <% } %>
+
+                    <div id="img-wrap">
+
+                        <% if (typeof img !=='undefined' ) { %>
+
+                            <img src=<%=img %> alt="">
+
+                            <% } %>
+                    </div>
+
+
+                    <% if (typeof introduction !=='undefined' ) { %>
+                        <p>
+                            <%= introduction %>
+                        </p>
+                        <% } %>
+
+        </div>
+
+        <!-- footer -->
+        <% include footer.ejs %>
+
+</body>
+
+</html>

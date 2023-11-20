@@ -1,7 +1,3 @@
-// content.js
-// require("../../public/images/Hetauda-City-College-Building.jpg")
-
-
 
 const contentData = {
     aboutcitycollege: {
@@ -43,12 +39,10 @@ const contentData = {
     },
     facultyandstaffs: {
         title: 'Faculty And Staff',
-        imageUrl: 'path/to/people-image.jpg',
 
 
         // faculty
         isFacultyPeople:""
-
 
     },
     departmentofhcc: {
