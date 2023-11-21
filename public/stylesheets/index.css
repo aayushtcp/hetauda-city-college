@@ -15,7 +15,6 @@
 #index-main {
     min-height: 150vh;
     width: 100vw;
-    background: var(--color-two);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,6 +26,7 @@
     background-position: center center;
     background-size: cover;
     position: relative;
+    background-attachment: fixed;
 
 }
 
@@ -135,49 +135,6 @@
     width: 30vw;
 }
 
-
-
-#advertisement-container {
-    min-height: 100vh;
-    height: 100vh;
-    width: 80vw;
-    margin: 0 auto;
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 2vw;
-    align-items: center;
-}
-
-#advertisement-container .each-ad-div {
-    height:70%;
-    width: 50vw;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-#advertisement-container .each-ad-div img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-#advertisement-container #info {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-
-}
-
-#advertisement-container #info p {
-    font-size: var(--font-size-p);
-    letter-spacing: 1px;
-}
 
 
 

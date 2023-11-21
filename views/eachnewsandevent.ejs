@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/eachnewsandevent.css">
+</head>
+
+<body>
+
+
+    <% include header.ejs %>
+
+
+
+        <div id="each-news-and-event-container">
+
+
+            <div id="img-wrap">
+                <img src="/images/school-index-image.avif" alt="">
+            </div>
+            <div id="description">
+                <h1>Title of the content</h1>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum odio quasi dolore ut commodi nesciunt
+                    nostrum ducimus consequatur, numquam molestiae provident nulla unde ex eaque vero excepturi delectus
+                    repellat esse.
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsa pariatur explicabo provident
+                    ipsam dolore, illum labore, modi eaque doloremque aliquid minus nam dolor at suscipit quidem commodi
+                    ab laboriosam.
+                </p>
+            </div>
+
+
+
+            <form action="" id="writing-comment-area">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Write Your Comment Here"></textarea>
+                
+                <input type="text" name="" id="your-name" placeholder="Enter Your Name">
+
+                <input type="submit" value="Submit Comment" id="submit-comment-button">
+            </form>
+
+
+            <div id="comment-showing-area">
+
+            <h1 id="all-comments">All Comments</h1>
+
+
+                <div id="each-comment">
+                    <h3>name of the commenter</h3>
+                    <p>Comment of that perso</p>
+                </div>
+                <div id="each-comment">
+                    <h3>name of the commenter</h3>
+                    <p>Comment of that perso</p>
+                </div>
+                <div id="each-comment">
+                    <h3>name of the commenter</h3>
+                    <p>Comment of that perso
+
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi delectus dolor voluptatem obcaecati exercitationem aliquid quas quod, praesentium expedita odio nulla, fuga dolore magnam voluptates eaque sint dignissimos commodi libero.
+                    </p>
+                </div>
+            </div>
+
+
+            
+        </div>
+
+
+
+        <% include footer.ejs %>
+
+</body>
+
+</html>

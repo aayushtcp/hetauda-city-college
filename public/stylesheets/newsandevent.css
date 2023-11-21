@@ -1,0 +1,35 @@
+#news-and-event {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    padding: 2vw;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+    min-height: auto;
+    align-items: flex-start;
+}
+
+#news-and-event #each-news-and-event {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    height: 300px;
+    width: 250px;
+    align-items: center;
+}
+
+#news-and-event #each-news-and-event img {
+    border-radius: 10px;
+    height: 80%;
+    width: 100%;
+    object-fit: contain;
+    background: transparent;
+}
+
+#news-and-event #each-news-and-event h3 {
+    color: #111;
+}

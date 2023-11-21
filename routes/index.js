@@ -10,7 +10,23 @@ const bachelorContentData = require("../views/content/bachelor");
 
 const staffContentData = require("../views/content/staffcontent")
 
+const newsandeventsData = require("../public/json/newsandevent.json")
 
+
+
+// news and data 
+router.get("/newsandevent/:eventName", function (req, res, next) {
+  const eventName = req.params.eventName;
+  const newsEvent = newsandeventsData.find(event => event.url === eventName);
+
+  if (!newsEvent) {
+    // Handle unknown event (e.g., show a 404 page)
+    res.status(404).render('error', { message: 'Event not found' });
+    return;
+  }
+
+  res.render('eachnewsandevent', newsEvent);
+});
 
 
 
@@ -30,6 +46,11 @@ router.get('/contact', function (req, res, next) {
 // getting each staf data
 router.get("/eachstaff", function (req, res, next) {
   res.render("eachstaff")
+});
+
+
+router.get("/newsandevent", function (req, res, next) {
+  res.render("newsandevent")
 });
 
 
@@ -59,7 +80,7 @@ router.get("/:changableRoutes", function (req, res) {
 
   }
   else if (staffContent) {
-    res.render('eachstaff', staffContent)                                             
+    res.render('eachstaff', staffContent)
   }
   else {
     res.render('aboutTemplate', aboutContent);
