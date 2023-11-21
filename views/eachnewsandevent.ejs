@@ -20,30 +20,32 @@
 
 
             <div id="img-wrap">
-                <img src="/images/school-index-image.avif" alt="">
+                <img src=<%=img %>alt="">
+
+
+
             </div>
             <div id="description">
-                <h1>Title of the content</h1>
+                <h1>
+
+                    <%= newstitle %>
+                </h1>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum odio quasi dolore ut commodi nesciunt
-                    nostrum ducimus consequatur, numquam molestiae provident nulla unde ex eaque vero excepturi delectus
-                    repellat esse.
+                    <%= description %>
                 </p>
 
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsa pariatur explicabo provident
-                    ipsam dolore, illum labore, modi eaque doloremque aliquid minus nam dolor at suscipit quidem commodi
-                    ab laboriosam.
+                    <%= description %>
                 </p>
             </div>
 
 
 
             <form action="" id="writing-comment-area">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Write Your Comment Here"></textarea>
-                
-                <input type="text" name="" id="your-name" placeholder="Enter Your Name">
+                <textarea name="" id="comment-of-commenter" cols="30" rows="10" placeholder="Write Your Comment Here"></textarea>
+
+                <input type="text" name="" id="your-name" placeholder="Enter Your Name" vaue="heloo">
 
                 <input type="submit" value="Submit Comment" id="submit-comment-button">
             </form>
@@ -51,12 +53,12 @@
 
             <div id="comment-showing-area">
 
-            <h1 id="all-comments">All Comments</h1>
+                <h1 id="all-comments">All Comments</h1>
 
 
                 <div id="each-comment">
-                    <h3>name of the commenter</h3>
-                    <p>Comment of that perso</p>
+                    <h3 id="name-of-commenter">name of the commenter</h3>
+                    <p>Comment of that person</p>
                 </div>
                 <div id="each-comment">
                     <h3>name of the commenter</h3>
@@ -66,19 +68,30 @@
                     <h3>name of the commenter</h3>
                     <p>Comment of that perso
 
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi delectus dolor voluptatem obcaecati exercitationem aliquid quas quod, praesentium expedita odio nulla, fuga dolore magnam voluptates eaque sint dignissimos commodi libero.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi delectus dolor voluptatem
+                        obcaecati exercitationem aliquid quas quod, praesentium expedita odio nulla, fuga dolore magnam
+                        voluptates eaque sint dignissimos commodi libero.
                     </p>
                 </div>
             </div>
 
 
-            
+
         </div>
 
 
 
         <% include footer.ejs %>
 
+
+
+
+
+
+
+
+
+            <script src="   /javascripts/eachnewsandevent.js"></script>
 </body>
 
 </html>
