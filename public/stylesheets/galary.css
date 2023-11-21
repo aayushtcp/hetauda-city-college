@@ -8,8 +8,7 @@
     justify-content: center;
 }
 
-#galary-container #each-galary-post 
-{
+#galary-container #each-galary-post {
     min-height: 325px;
     width: 350px;
     position: relative;
@@ -63,16 +62,123 @@
     transform: translateY(0%);
 }
 
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #000;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
 
+#container.open {
+    display: flex;
+}
+
+#photo-preview {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.preview-img {
+    flex: 0 0 auto;
+    width: 100%;
+    display: none;
+    height: 100%;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.preview-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: transparent;
+}
+
+.active {
+    display: block;
+}
+
+#prev-btn,
+#next-btn {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    margin: 5px;
+}
+
+i#prev-btn {
+    position: absolute;
+    width: fit-content;
+    left: 10px;
+    top: 50%;
+    color: white;
+
+    font-size: 29px;
+}
+
+i#next-btn {
+    position: absolute;
+    width: fit-content;
+    right: 2vw;
+    top: 50%;
+    color: white;
+    font-size: 29px;
+
+    letter-spacing: 1px;
+
+}
+
+#cancel-preview {
+    display: none;
+}
 
 @media(max-width:980px) {
     #galary-container {
         padding: 2vw;
     }
 
-#galary-container #each-galary-post 
-{
-    width: 100%;
-}
+    #galary-container #each-galary-post {
+        width: 100%;
+    }
+
+    i#prev-btn {
+        left: 20%;
+        font-size: 32px;
+        top: initial;
+        bottom: 20%;
+    }
+
+    i#next-btn {
+        position: absolute;
+        width: fit-content;
+        right: 20%;
+        top: initial;
+        bottom: 20%;
+        font-size: 32px;
+
+    }
+
+    #cancel-preview {
+        display: flex;
+        position: absolute;
+        color: white;
+        bottom: 20%;
+        left: 50%;
+        font-size: 32px;
+        transform: translate(-50%, -50%);
+    }
 
 }
