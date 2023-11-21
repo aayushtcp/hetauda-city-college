@@ -7,7 +7,7 @@ fetch("../json/facultyandstaff.json").
         let table = "";
         objectdata.map(function (item) {
             table += `
-            <a href=${item.username} id="each-staff">
+            <a href="/facultyandstaffs/${item.username}" id="each-staff">
             <img src=${item.img} alt="">
             <h3>${item.name}</h3>
              </a>

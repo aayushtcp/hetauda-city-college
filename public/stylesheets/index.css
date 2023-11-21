@@ -143,7 +143,6 @@
 /* event container */
 
 #index-event {
-    min-height: 100vh;
     width: 100vw;
 }
 
@@ -172,99 +171,6 @@
     text-align: center;
     color: black;
 }
-
-#event-container {
-    display: flex;
-    /* gap: 10px; */
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 80%;
-    margin: 0 auto;
-    height: 60vh;
-    gap: 5px;
-    overflow: hidden;
-    align-items: center;
-}
-
-#each-event {
-    max-width: 400px;
-    height: calc(50% - 5px);
-    transition: .5s ease-in-out;
-    cursor: pointer;
-    position: relative;
-}
-
-#each-event img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-#each-event #info {
-    position: absolute;
-    padding: 10px;
-    height: 100%;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    gap: 10px;
-    background: rgba(0, 0, 0, 0.556);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    display: none;
-    transition: .5s ease-in-out;
-
-}
-
-#each-event #info h3 {
-    text-transform: uppercase;
-    border-bottom: 2px solid white;
-    width: 100%;
-}
-
-#each-event:hover #info {
-    display: flex;
-}
-
-
-#show-all-event {
-    width: fit-content;
-    text-align: center;
-    margin: 0 auto;
-    font-size: var(--font-size-a);
-    cursor: pointer;
-    transition: .3s ease-in-out;
-
-    margin-top: 50px;
-}
-
-#show-all-event:hover {
-    scale: 1.1;
-}
-
-#show-all-event a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    color: #111;
-}
-
-#show-all-event a i {
-    font-size: var(--icon-size);
-    color: #111;
-}
-
-
-
-
-
-
-
-
-
 
 
 
