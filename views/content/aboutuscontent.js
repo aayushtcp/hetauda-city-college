@@ -6,14 +6,6 @@ const contentData = {
         altText: 'About Heatuda City college',
 
         paragraphOne: "Hetauda City College was established in 2013 AD (2070 BS) and It is located in Kantirajpath, Hetauda, Makawanpur, Nepal. It is renowned for its decade-long legacy in providing quality education in Hetauda. As the first IT college in the region, established in Hetauda, HCC has been at the forefront of nurturing resourceful graduates who stand out in the competitive global landscape. With a curriculum that encompasses in-depth learning and encourages individual research, the college is dedicated to the holistic development of its students.",
-
-
-        paragraphTwo: "The college boasts a variety of academic programs including the Bachelors of Science in Computer Science and Information Technology (BSc.CSIT), the Bachelors in Business Studies (BBS), and the Bachelor of Arts in Computer Application (BCA), which was introduced in 2018. These programs are structured to produce skilled professionals in both the IT and business sectors, fulfilling the demand for experts in these pivotal fields, especially in a developing nation like Nepal.",
-
-        paragraphFour: "HCC is committed to excellence, demonstrated by its exceptional teaching methodologies, which have led to outstanding academic achievements, including multiple T.U. Gold medals and awards. The college's approach to education is comprehensive, encompassing theoretical knowledge, practical skills, and personal development.",
-
-        paragraphFive: "Facilities at Hetauda City College are top-notch, with a world-class library that houses over 5,000 books and offers ample space for study and collaboration. The computer lab is equipped with the latest technology to support digital learning and research. Moreover, the college emphasizes the importance of sports, providing facilities for basketball, volleyball, and table tennis, as well as organizing annual sports events to encourage physical fitness and teamwork among students."
-
     },
     whyhcc: {
         title: 'Why HCC',
@@ -42,7 +34,7 @@ const contentData = {
 
 
         // faculty
-        isFacultyPeople:""
+        isFacultyPeople: ""
 
     },
     departmentofhcc: {

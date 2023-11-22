@@ -14,104 +14,120 @@
 
 <body>
     <% include header.ejs %>
-        <div id="content-body">
-
-            <h1>
-                <%= title %>
-            </h1>
-            <div id="img-wrap">
-
-                <% if (typeof imageUrl !=='undefined' ) { %>
-
-                    <img src=<%=imageUrl %>
-                    alt="">
-
-                    <% } %>
-            </div>
-
-            <div id="description">
 
 
-                <% if (typeof paragraphOne !=='undefined' ) { %>
-                    <p>
-                        <%= paragraphOne %>
-                    </p>
-                    <% } %>
 
-                        <% if (typeof paragraphTwo !=='undefined' ) { %>w
-                            <p>
-                                <%= paragraphTwo %>
-                            </p>
-                            <% } %>
+        <div id="content-body-container">
 
 
-                                <% if (typeof paragraphThree !=='undefined' ) { %>
-                                    <p>
-                                        <%= paragraphThree %>
-                                    </p>
-                                    <% } %>
-
-
-                                        <% if (typeof paragraphFour !=='undefined' ) { %>
-                                            <p>
-                                                <%= paragraphFour %>
-                                            </p>
-                                            <% } %>
-
-                                                <% if (typeof paragraphFive !=='undefined' ) { %>
-                                                    <p>
-                                                        <%= paragraphFive %>
-                                                    </p>
-                                                    <% } %>
+            <div id="list">
+                <a href="/aboutcitycollege">About Hetauda City college</a>
+                <a href="/whyhcc">Why HCC</a>
+                <a href="/leaderships">Leadership</a>
+                <a href="/facultyandstaffs">Faculty and Staffs</a>
+                <a href="/contact">Contact</a>
             </div>
 
 
+            <div id="content-body">
 
-            <!-- in this he wychscc.ejs page will render here and  -->
-            <% if (typeof whyhcc !=='undefined' ) { %>
-                <% include whyhcc.ejs %>
-                    <%= whyhcc %>
+                <h1>
+                    <%= title %>
+                </h1>
+                <div id="img-wrap">
+
+                    <% if (typeof imageUrl !=='undefined' ) { %>
+
+                        <img src=<%=imageUrl %>
+                        alt="">
+
+                        <% } %>
+                </div>
+
+                <div id="description">
+
+
+                    <% if (typeof paragraphOne !=='undefined' ) { %>
+                        <p>
+                            <%= paragraphOne %>
+                        </p>
                         <% } %>
 
-
-                            <!-- addding description on whyhscc page -->
-
-
-                            <% if (typeof quote !=='undefined' ) { %>
+                            <% if (typeof paragraphTwo !=='undefined' ) { %>w
                                 <p>
-                                    <%= quote %>
+                                    <%= paragraphTwo %>
                                 </p>
                                 <% } %>
 
-                                    <% if (typeof whyhccparagraphone !=='undefined' ) { %>
+
+                                    <% if (typeof paragraphThree !=='undefined' ) { %>
                                         <p>
-                                            <%= whyhccparagraphone %>
+                                            <%= paragraphThree %>
                                         </p>
                                         <% } %>
 
-                                            <% if (typeof whyhccparagraphtwo !=='undefined' ) { %>
+
+                                            <% if (typeof paragraphFour !=='undefined' ) { %>
                                                 <p>
-                                                    <%= whyhccparagraphtwo %>
+                                                    <%= paragraphFour %>
                                                 </p>
                                                 <% } %>
 
+                                                    <% if (typeof paragraphFive !=='undefined' ) { %>
+                                                        <p>
+                                                            <%= paragraphFive %>
+                                                        </p>
+                                                        <% } %>
+                </div>
+
+
+
+                <!-- in this he wychscc.ejs page will render here and  -->
+                <% if (typeof whyhcc !=='undefined' ) { %>
+                    <% include whyhcc.ejs %>
+                        <%= whyhcc %>
+                            <% } %>
+
+
+                                <!-- addding description on whyhscc page -->
+
+
+                                <% if (typeof quote !=='undefined' ) { %>
+                                    <p>
+                                        <%= quote %>
+                                    </p>
+                                    <% } %>
+
+                                        <% if (typeof whyhccparagraphone !=='undefined' ) { %>
+                                            <p>
+                                                <%= whyhccparagraphone %>
+                                            </p>
+                                            <% } %>
+
+                                                <% if (typeof whyhccparagraphtwo !=='undefined' ) { %>
+                                                    <p>
+                                                        <%= whyhccparagraphtwo %>
+                                                    </p>
+                                                    <% } %>
 
 
 
 
-                                                    <!-- including faculty and staff page here -->
 
-                                                    <% if (typeof isFacultyPeople !=='undefined' ) { %>
-                                                        <% include facultyandstaff.ejs %>
-                                                            <% } %>
+                                                        <!-- including faculty and staff page here -->
+
+                                                        <% if (typeof isFacultyPeople !=='undefined' ) { %>
+                                                            <% include facultyandstaff.ejs %>
+                                                                <% } %>
 
 
-
-                                                                <!-- footer  -->
-                                                                <% include footer.ejs %>
+            </div>
         </div>
 
-        <script src="/javascripts/template.js"></script>
+        <!-- footer  -->
+        <% include footer.ejs %>
+
+            <script src="/javascripts/template.js"></script>
 </body>
 
 </html>

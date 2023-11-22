@@ -16,8 +16,9 @@
     justify-content: flex-start;
     text-align: right;
     position: sticky;
-    top: 2vw;
     height: fit-content;
+    top: 8vw;
+
 
 }
 
