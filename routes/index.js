@@ -5,6 +5,7 @@ const nodemailer = require('nodemailer');
 
 // importing fomr model
 const FormModel = require("./form")
+const CommentModel = require("./comment")
 
 
 
@@ -17,7 +18,6 @@ const bachelorContentData = require("../views/content/bachelor");
 const newsandeventsData = require("../public/json/newsandevent.json")
 
 const facultyContentData = require("../public/json/facultyandstaff.json")
-
 
 
 // each staf
@@ -115,9 +115,32 @@ router.get("/:changableRoutes", function (req, res) {
 
 
 
+// comment submit code is here
+router.post('/comment', async (req, res) => {
+  try {
+    const { username, comment } = req.body;
+    const newComment = new CommentModel({ username, comment });
+    await newComment.save();
+
+    // Send a success response
+
+    res.send("Comment Submitted !");
+  } catch (error) {
+    console.error(error);
+
+    // Send an error response
+    res.status(500).json({ success: false, message: 'Internal Server Error' });
+  }
+});
 
 
 
+
+
+
+
+
+// form submit code is here
 // Configure nodemailer
 const transporter = nodemailer.createTransport({
   service: 'gmail',
