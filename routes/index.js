@@ -124,7 +124,7 @@ router.post('/comment', async (req, res) => {
 
     // Send a success response
 
-    res.send("Comment Submitted !");
+    res.render("contact");
   } catch (error) {
     console.error(error);
 
