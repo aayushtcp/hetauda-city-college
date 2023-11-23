@@ -70,10 +70,13 @@ router.post('/newsandevent/:eventName', async (req, res) => {
     // Save the comment to the database
     await newComment.save();
 
-    // Redirect back to the same page after the comment is saved
-    res.redirect(`/newsandevent/${eventName}`);
 
-    
+
+    // Redirect to the same page after the comment is saved
+    const redirectUrl = `/newsandevent/${eventName}`;
+    res.redirect(redirectUrl);
+
+
   } catch (error) {
     console.error(error);
     res.status(500).json({ success: false, message: 'Internal Server Error' });
