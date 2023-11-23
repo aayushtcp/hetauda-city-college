@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 const e = require('express');
-const nodemailer = require('nodemailer');
+// const nodemailer = require('nodemailer');
 
 // importing fomr model
-const FormModel = require("./form")
-const CommentModel = require("./comment")
+// const FormModel = require("./form")
+// const CommentModel = require("./comment")
 
 
 
@@ -118,9 +118,9 @@ router.get("/:changableRoutes", function (req, res) {
 // comment submit code is here
 router.post('/comment', async (req, res) => {
   try {
-    const { username, comment } = req.body;
-    const newComment = new CommentModel({ username, comment });
-    await newComment.save();
+    // const { username, comment } = req.body;
+    // const newComment = new CommentModel({ username, comment });
+    // await newComment.save();
 
     // Send a success response
 
@@ -140,61 +140,61 @@ router.post('/comment', async (req, res) => {
 
 
 
-// form submit code is here
-// Configure nodemailer
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: '', // replace with your Gmail email address
-    pass: '' // replace with your Gmail password
-  }
-});
+// // form submit code is here
+// // Configure nodemailer
+// const transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     user: '', // replace with your Gmail email address
+//     pass: '' // replace with your Gmail password
+//   }
+// });
 
-// POST route for form submission
-router.post('/submit', async function (req, res, next) {
-  const fullName = req.body.fullname;
-  const email = req.body.email;
-  const message = req.body.message;
-  const subject = req.body.subject;
-
-
-
-  // Send email using nodemailer
-  try {
+// // POST route for form submission
+// router.post('/submit', async function (req, res, next) {
+//   const fullName = req.body.fullname;
+//   const email = req.body.email;
+//   const message = req.body.message;
+//   const subject = req.body.subject;
 
 
 
-    const formEntry = new FormModel({
-      fullname: req.body.fullname,
-      email: req.body.email,
-      message: req.body.message,
-      subject: req.body.subject,
-    });
-    await formEntry.save();
+//   // Send email using nodemailer
+//   try {
 
 
-    // aile chai mail sent hunna tara database ma chai aauxa
 
-    await sendEmail(fullName, email, message, subject);
-    res.render('success')
-  } catch (error) {
-    console.error(error);
-    // res.render('submitted', { username, password, emailSent: false });
-    res.render('error');
-  }
-});
+//     const formEntry = new FormModel({
+//       fullname: req.body.fullname,
+//       email: req.body.email,
+//       message: req.body.message,
+//       subject: req.body.subject,
+//     });
+//     await formEntry.save();
 
-// Function to send email
-async function sendEmail(fullName, email, message, subject) {
-  const mailOptions = {
-    from: '', // replace with your Gmail email address
-    to: ``, // replace with the recipient's email address
-    subject: 'Hetauda City College Form Request',
-    text: `Full Name: ${fullName}\Email: ${email}\nMessage: ${message}\n Subject: ${subject}r`,
-  };
 
-  await transporter.sendMail(mailOptions);
-}
+//     // aile chai mail sent hunna tara database ma chai aauxa
+
+//     await sendEmail(fullName, email, message, subject);
+//     res.render('success')
+//   } catch (error) {
+//     console.error(error);
+//     // res.render('submitted', { username, password, emailSent: false });
+//     res.render('error');
+//   }
+// });
+
+// // Function to send email
+// async function sendEmail(fullName, email, message, subject) {
+//   const mailOptions = {
+//     from: '', // replace with your Gmail email address
+//     to: ``, // replace with the recipient's email address
+//     subject: 'Hetauda City College Form Request',
+//     text: `Full Name: ${fullName}\Email: ${email}\nMessage: ${message}\n Subject: ${subject}r`,
+//   };
+
+//   await transporter.sendMail(mailOptions);
+// }
 
 
 
