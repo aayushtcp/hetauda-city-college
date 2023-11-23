@@ -51,6 +51,48 @@ router.get("/newsandevent/:eventName", function (req, res, next) {
   res.render('eachnewsandevent', newsEvent);
 });
 
+
+
+// comment form
+router.post('/newsandevent/:eventName', async (req, res) => {
+  const eventName = req.params.eventName;
+  const newsEvent = newsandeventsData.find(event => event.url === eventName);
+
+  if (!newsEvent) {
+    res.status(404).render('error', { message: 'Event not found' });
+    return;
+  }
+
+  try {
+    const { username, comment } = req.body;
+    const newComment = new CommentModel({ username, comment });
+
+    // Save the comment to the database
+    await newComment.save();
+
+    // Redirect back to the same page after the comment is saved
+    res.redirect(`/newsandevent/${eventName}`);
+
+    
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: 'Internal Server Error' });
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // galary 
 router.get("/galary", function (req, res) {
   res.render("galary")
@@ -112,26 +154,6 @@ router.get("/:changableRoutes", function (req, res) {
 });
 
 
-
-
-
-// comment submit code is here
-router.post('/comment', async (req, res) => {
-  try {
-    const { username, comment } = req.body;
-    const newComment = new CommentModel({ username, comment });
-    await newComment.save();
-
-    // Send a success response
-
-    res.send("Comment Submitted !");
-  } catch (error) {
-    console.error(error);
-
-    // Send an error response
-    res.status(500).json({ success: false, message: 'Internal Server Error' });
-  }
-});
 
 
 

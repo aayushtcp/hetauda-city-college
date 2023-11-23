@@ -41,15 +41,16 @@
             </div>
 
 
-
-            <form action="/comment" id="writing-comment-area" method="post">
+            <!-- Adjust the form action dynamically based on the event URL -->
+            <form action="/newsandevent/<%= url %>" id="writing-comment-area" method="post">
                 <textarea name="comment" id="comment-of-commenter" cols="30" rows="10"
                     placeholder="Write Your Comment Here"></textarea>
 
-                <input type="text" name="username" id="your-name" placeholder="Enter Your Name" vaue="heloo">
+                <input type="text" name="username" id="your-name" placeholder="Enter Your Name" value="heloo">
 
                 <input type="submit" value="Submit Comment" id="submit-comment-button">
             </form>
+
 
 
             <div id="comment-showing-area">
