@@ -1,84 +1,70 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-const e = require('express');
+const e = require("express");
 // const nodemailer = require('nodemailer');
 
 // importing fomr model
 // const FormModel = require("./form")
 // const CommentModel = require("./comment")
 
-
-
-const aboutUscontentData = require("../views/content/aboutuscontent")
-const hsebContentData = require("../views/content/hsebcontent")
+const aboutUscontentData = require("../views/content/aboutuscontent");
+const hsebContentData = require("../views/content/hsebcontent");
 const bachelorContentData = require("../views/content/bachelor");
 
 // const staffContentData = require("../views/content/staffcontent")
 
-const newsandeventsData = require("../public/json/newsandevent.json")
+const newsandeventsData = require("../public/json/newsandevent.json");
 
-const facultyContentData = require("../public/json/facultyandstaff.json")
-
+const facultyContentData = require("../public/json/facultyandstaff.json");
 
 // each staf
 router.get("/facultyandstaffs/:staffname", function (req, res, next) {
   const staffname = req.params.staffname;
-  const newsEvent = facultyContentData.find(event => event.username === staffname);
+  const newsEvent = facultyContentData.find(
+    (event) => event.username === staffname
+  );
 
   if (!newsEvent) {
     // Handle unknown event (e.g., show a 404 page)
-    res.status(404).render('error', { message: 'Event not found' });
+    res.status(404).render("error", { message: "Event not found" });
     return;
   }
 
-  res.render('eachstaff', newsEvent);
+  res.render("eachstaff", newsEvent);
 });
 
-
-
-
-// news and data 
+// news and data
 router.get("/newsandevent/:eventName", function (req, res, next) {
   const eventName = req.params.eventName;
-  const newsEvent = newsandeventsData.find(event => event.url === eventName);
+  const newsEvent = newsandeventsData.find((event) => event.url === eventName);
 
   if (!newsEvent) {
     // Handle unknown event (e.g., show a 404 page)
-    res.status(404).render('error', { message: 'Event not found' });
+    res.status(404).render("error", { message: "Event not found" });
     return;
   }
 
-  res.render('eachnewsandevent', newsEvent);
+  res.render("eachnewsandevent", newsEvent);
 });
 
-// galary 
+// galary
 router.get("/galary", function (req, res) {
-  res.render("galary")
-})
-
-
+  res.render("galary");
+});
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index')
+router.get("/", function (req, res, next) {
+  res.render("index");
 });
-
-
 
 /* GET contat page. */
-router.get('/contact', function (req, res, next) {
-  res.render('contact')
+router.get("/contact", function (req, res, next) {
+  res.render("contact");
 });
-
-
-
-
 
 router.get("/newsandevent", function (req, res, next) {
-  res.render("newsandevent")
+  res.render("newsandevent");
 });
-
-
 
 // Consolidated route for about and programs page
 router.get("/:changableRoutes", function (req, res) {
@@ -89,56 +75,38 @@ router.get("/:changableRoutes", function (req, res) {
   const bachelorContent = bachelorContentData[changableRoutes];
   // const staffContent = staffContentData[changableRoutes]
 
-
-
   if (!hsebContent && !aboutContent && !bachelorContent && !staffContent) {
     // Handle unknown section (e.g., show a 404 page)
-    res.status(404).render('error', { message: 'Page not found' });
+    res.status(404).render("error", { message: "Page not found" });
     return;
   }
 
   if (hsebContent) {
-    res.render('hseb', hsebContent);
+    res.render("hseb", hsebContent);
+  } else if (bachelorContent) {
+    res.render("bachelor", bachelorContent);
+  } else {
+    res.render("aboutTemplate", aboutContent);
   }
-  else if (bachelorContent) {
-    res.render('bachelor', bachelorContent)
-
-  }
-  else {
-    res.render('aboutTemplate', aboutContent);
-
-  }
-
 });
 
-
-
-
-
 // comment submit code is here
-router.post('/comment', async (req, res) => {
+router.post("/newsandevent/:eventName", async (req, res) => {
   try {
     // const { username, comment } = req.body;
     // const newComment = new CommentModel({ username, comment });
     // await newComment.save();
-
-    // Send a success response
-
-    res.render("contact");
-  } catch (error) {
+    res.render("/newsandevent/:eventName");
+    const eventName = req.params.eventName;
+    const newsEvent = newsandeventsData.find((event) => event.url === eventName);
+  }
+   catch (error) {
     console.error(error);
 
     // Send an error response
-    res.status(500).json({ success: false, message: 'Internal Server Error' });
+    // res.status(500).json({ success: false, message: "Internal Server Error" });
   }
 });
-
-
-
-
-
-
-
 
 // // form submit code is here
 // // Configure nodemailer
@@ -157,12 +125,8 @@ router.post('/comment', async (req, res) => {
 //   const message = req.body.message;
 //   const subject = req.body.subject;
 
-
-
 //   // Send email using nodemailer
 //   try {
-
-
 
 //     const formEntry = new FormModel({
 //       fullname: req.body.fullname,
@@ -171,7 +135,6 @@ router.post('/comment', async (req, res) => {
 //       subject: req.body.subject,
 //     });
 //     await formEntry.save();
-
 
 //     // aile chai mail sent hunna tara database ma chai aauxa
 
@@ -195,11 +158,5 @@ router.post('/comment', async (req, res) => {
 
 //   await transporter.sendMail(mailOptions);
 // }
-
-
-
-
-
-
 
 module.exports = router;
