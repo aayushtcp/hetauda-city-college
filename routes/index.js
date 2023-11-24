@@ -1,11 +1,11 @@
 var express = require("express");
 var router = express.Router();
-const e = require("express");
+const e = require('express');
 // const nodemailer = require('nodemailer');
 
 // importing fomr model
-// const FormModel = require("./form")
-// const CommentModel = require("./comment")
+const FormModel = require("./form")
+const CommentModel = require("./comment")
 
 const aboutUscontentData = require("../views/content/aboutuscontent");
 const hsebContentData = require("../views/content/hsebcontent");
@@ -46,6 +46,49 @@ router.get("/newsandevent/:eventName", function (req, res, next) {
 
   res.render("eachnewsandevent", newsEvent);
 });
+
+
+
+// comment form
+router.post('/newsandevent/:eventName', async (req, res) => {
+  const eventName = req.params.eventName;
+  const newsEvent = newsandeventsData.find(event => event.url === eventName);
+
+  if (!newsEvent) {
+    res.status(404).render('error', { message: 'Event not found' });
+    return;
+  }
+
+  try {
+    const { username, comment } = req.body;
+    const newComment = new CommentModel({ username, comment });
+
+    // Save the comment to the database
+    await newComment.save();
+
+    // Render the view after the comment is saved
+    const redirectUrl = `/newsandevent/${eventName}`;
+    res.redirect(redirectUrl);
+
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: 'Internal Server Error' });
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // galary
 router.get("/galary", function (req, res) {
@@ -91,22 +134,29 @@ router.get("/:changableRoutes", function (req, res) {
 });
 
 // comment submit code is here
-router.post("/newsandevent/:eventName", async (req, res) => {
+router.post('/comment', async (req, res) => {
   try {
     // const { username, comment } = req.body;
     // const newComment = new CommentModel({ username, comment });
     // await newComment.save();
-    res.render("/newsandevent/:eventName");
-    const eventName = req.params.eventName;
-    const newsEvent = newsandeventsData.find((event) => event.url === eventName);
-  }
-   catch (error) {
+
+    // Send a success response
+
+    res.render("contact");
+  } catch (error) {
     console.error(error);
 
     // Send an error response
-    // res.status(500).json({ success: false, message: "Internal Server Error" });
+    res.status(500).json({ success: false, message: 'Internal Server Error' });
   }
 });
+
+
+
+
+
+
+
 
 // // form submit code is here
 // // Configure nodemailer
@@ -125,8 +175,12 @@ router.post("/newsandevent/:eventName", async (req, res) => {
 //   const message = req.body.message;
 //   const subject = req.body.subject;
 
+
+
 //   // Send email using nodemailer
 //   try {
+
+
 
 //     const formEntry = new FormModel({
 //       fullname: req.body.fullname,
@@ -135,6 +189,7 @@ router.post("/newsandevent/:eventName", async (req, res) => {
 //       subject: req.body.subject,
 //     });
 //     await formEntry.save();
+
 
 //     // aile chai mail sent hunna tara database ma chai aauxa
 
@@ -147,16 +202,22 @@ router.post("/newsandevent/:eventName", async (req, res) => {
 //   }
 // });
 
-// // Function to send email
-// async function sendEmail(fullName, email, message, subject) {
-//   const mailOptions = {
-//     from: '', // replace with your Gmail email address
-//     to: ``, // replace with the recipient's email address
-//     subject: 'Hetauda City College Form Request',
-//     text: `Full Name: ${fullName}\Email: ${email}\nMessage: ${message}\n Subject: ${subject}r`,
-//   };
+// Function to send email
+async function sendEmail(fullName, email, message, subject) {
+  const mailOptions = {
+    from: '', // replace with your Gmail email address
+    to: ``, // replace with the recipient's email address
+    subject: 'Hetauda City College Form Request',
+    text: `Full Name: ${fullName}\Email: ${email}\nMessage: ${message}\n Subject: ${subject}r`,
+  };
 
 //   await transporter.sendMail(mailOptions);
 // }
+
+
+
+
+
+
 
 module.exports = router;
